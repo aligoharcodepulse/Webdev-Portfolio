@@ -152,7 +152,7 @@ body{
     display: inline-block;
     padding: 12px 28px;
     background-color: #f0a6ca;
-    border-radius: 20px;
+    border-radius: 35px;
     color: #020202;
     box-shadow: 0px 0px 30px #f0a6ca;
     border: 2px solid #f0a6ca;
@@ -601,6 +601,14 @@ body{
     .about-content{
         width: 60%;
     }
+
+    .team{
+        padding: 0px 2rem;
+    }
+    
+    .team-content{
+        width: 60%;
+    }
 }
 
 @media (max-width: 1117px) {
@@ -623,6 +631,19 @@ body{
     .about-content p{
         font-size: 1rem;
     }
+    .team-content h4{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .team{
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .team-content p{
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 840px) {
@@ -632,6 +653,14 @@ body{
     }
     
     .about-content{
+        width: 65%;
+    }
+    .team{
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .team-content{
         width: 65%;
     }
 }
@@ -801,10 +830,15 @@ body{
         width: 90%;
         margin: 2rem 0px;
     }
+    .team{
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0px;
+    }
 
-    .skill-container{
-        margin: 1.5rem 0px;
-        align-self: center;
+    .team .team-content{
+        width: 90%;
+        margin: 2rem 0px;
     }
 
     .service-container .service-list{
@@ -852,6 +886,17 @@ body{
     #about{
         gap: 2rem;
     }
+
+    .team .team-content{
+        width: 100%;
+        padding: 0px 1.5rem;
+        margin: .85rem 0px;
+        flex-direction: column;
+    }
+
+    #team{
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 560px) {
@@ -880,6 +925,9 @@ body{
     .about .about-content{
         flex-direction: column;
     }
+    .team .team-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 495px) {
@@ -887,6 +935,12 @@ body{
         font-size: 2.2rem;
     }
     .about .about-content{
+        flex-direction: column;
+    }
+    #team h2{
+        font-size: 2.2rem;
+    }
+    .team .team-content{
         flex-direction: column;
     }
     #service .sub-title{
@@ -906,6 +960,9 @@ body{
     }
 
     .about-content p{
+        line-height: 20px;
+    }
+    .team-content p{
         line-height: 20px;
     }
 }
@@ -961,6 +1018,9 @@ body{
     .about .about-content{
         flex-direction: column;
     }
+    .team .team-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 425px) {
@@ -973,6 +1033,9 @@ body{
         width: 90%;
     }
     .about .about-content{
+        flex-direction: column;
+    }
+    .team .team-content{
         flex-direction: column;
     }
 }
@@ -999,6 +1062,12 @@ body{
     .about-content .h4{
         font-size: 1.1rem;
     }
+    .team .team-content{
+        flex-direction: column;
+    }
+    .team-content .h4{
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1010,6 +1079,17 @@ body{
     }
 
     .about .about-content h4{
+        font-size: 17px;
+    }
+
+    .team .team-content{
+        flex-direction: column;
+    }
+    .team .team-content p{
+        font-size: 14px;
+    }
+
+    .team .team-content h4{
         font-size: 17px;
     }
 
@@ -1068,6 +1148,9 @@ body{
     .about .about-content{
         flex-direction: column;
     }
+    .team .team-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 304px) {
@@ -1075,6 +1158,9 @@ body{
         font-size: 15px;
     }
     .about .about-content{
+        flex-direction: column;
+    }
+    .team .team-content{
         flex-direction: column;
     }
 }
@@ -1101,6 +1187,9 @@ body{
     .about .about-content{
         flex-direction: column;
     }
+    .team .team-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 284px) {
@@ -1108,6 +1197,9 @@ body{
         font-size: 1.1rem;
     }
     .about .about-content{
+        flex-direction: column;
+    }
+    .team .team-content{
         flex-direction: column;
     }
 }
