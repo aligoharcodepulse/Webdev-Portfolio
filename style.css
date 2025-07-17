@@ -229,10 +229,15 @@ body{
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   gap: 1rem;
+  transition: background-color .5s, transform .5s;
+  /* box-shadow: 1px 1px 20px #f0a6ca,
+                1px 1px 30px #f0a6ca; */
 }
-
+.about-content:hover{
+    transform: translateY(-10px);
+}
 
 .ceo-img {
   width: 200px;
@@ -241,24 +246,6 @@ body{
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-
-/* .about-btn {
-  margin-top: 1rem;
-  padding: 10px 20px;
-  text-decoration: none;
-  background-color: #f0a6ca;
-  color: #000;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  border: 2px solid #f0a6ca;
-}
-
-.about-btn:hover {
-    box-shadow: 0px 0px 60px #f0a6ca;
-    background-color: black;
-    color: #f0a6ca;
-} */
 
 .about-content h4{
     font-size: 2rem;
@@ -362,9 +349,6 @@ body{
     box-shadow: 0px 0px 60px #f0a6ca;
     background-color: black;
     color: #f0a6ca;
-    /* background-color: transparent;
-    color: #f0a6ca;
-    box-shadow: 0px 0px 20px #f0a6ca; */
 }
 
 .service-list .service-box:hover{
@@ -542,11 +526,6 @@ body{
         padding: 0px 2rem;
     }
     
-    .about-img{
-        width: 40%;
-        height: 535px;
-    }
-    
     .about-content{
         width: 60%;
     }
@@ -578,10 +557,6 @@ body{
     .about{
         gap: 1rem;
         padding: 1rem;
-    }
-
-    .about-img{
-        width: 35%;
     }
     
     .about-content{
@@ -750,19 +725,9 @@ body{
         padding: 0px;
     }
 
-    .about .about-img{
-        width: 50%;
-        height: auto;
-    }
-
     .about .about-content{
         width: 90%;
         margin: 2rem 0px;
-    }
-
-    .about-img img{
-        width: 100%;
-        height: 100%;
     }
 
     .skill-container{
@@ -804,21 +769,16 @@ body{
 }
 
 @media (max-width: 690px) {
-    .about .about-img{
-        width: 50%;
-    }
 
     .about .about-content{
         width: 100%;
         padding: 0px 1.5rem;
+        margin: .85rem 0px;
+        flex-direction: column;
     }
 
     #about{
         gap: 2rem;
-    }
-
-    .about .about-content{
-        margin: .85rem 0px;
     }
 }
 
@@ -845,13 +805,18 @@ body{
     .newsletter-div{
         width: 85%;
     }
+    .about .about-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 495px) {
     #about h2{
         font-size: 2.2rem;
     }
-
+    .about .about-content{
+        flex-direction: column;
+    }
     #service .sub-title{
         font-size: 2.2rem;
     }
@@ -870,10 +835,6 @@ body{
 
     .about-content p{
         line-height: 20px;
-    }
-
-    .skill-container{
-        width: 85%;
     }
 }
 
@@ -925,6 +886,9 @@ body{
     .contact-form button{
         padding: .65rem 0px;
     }
+    .about .about-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 425px) {
@@ -935,6 +899,9 @@ body{
 
     .newsletter-div{
         width: 90%;
+    }
+    .about .about-content{
+        flex-direction: column;
     }
 }
 
@@ -954,49 +921,24 @@ body{
     .home-content .home-para{
         margin-bottom: 3rem;
     }
-
+    .about .about-content{
+        flex-direction: column;
+    }
     .about-content .h4{
         font-size: 1.1rem;
-    }
-
-    .about .skill-container{
-        width: 95%;
-    }
-
-    .about .skill-container h4{
-        font-size: 1.1rem;
-    }
-
-    .skill-list{
-        gap: .5rem;
-    }
-    
-    .skill-list a{
-        padding: 5px 8px;
-        font-size: 1rem;
     }
 }
 
 @media (max-width: 360px) {
+    .about .about-content{
+        flex-direction: column;
+    }
     .about .about-content p{
         font-size: 14px;
     }
 
     .about .about-content h4{
         font-size: 17px;
-    }
-
-    .about .skill-container h4{
-        font-size: 15px;
-    }
-
-    .about .skill-list a{
-        font-size: 14px;
-    }
-
-    .about-content .about-btn{
-        font-size: 14px;
-        padding: 6px 12px;;
     }
 
     .copyright-container p{
@@ -1051,11 +993,17 @@ body{
     .newsletter-container h3 {
         font-size: 1.3rem;
     }
+    .about .about-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 304px) {
     .service-container .service-list .service-box h2{
         font-size: 15px;
+    }
+    .about .about-content{
+        flex-direction: column;
     }
 }
 
@@ -1078,10 +1026,16 @@ body{
         font-size: 15px;
         padding: 5px 0px;
     }
+    .about .about-content{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 284px) {
     .newsletter-container h3 {
         font-size: 1.1rem;
+    }
+    .about .about-content{
+        flex-direction: column;
     }
 }
